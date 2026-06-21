@@ -1,16 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
     <title>add items</title>
-</head>
-<body>
-    Items: <input type="text" style="border-radius: 2%; text-align: center;" name="Items"><br><br> 
-    Price: <input type="text" style="border-radius: 2%; text-align: center;" name="Items"/> <br> <br>
-    quantity: <input type="number" style="border-radius: 2%; text-align: center;" name="Items">
+    <link rel="stylesheet" href="easyMart.css" />
 
-   
-    <script src="script.js"></script>
-</body>
+  </head>
+ 
+  <body class="body">
+    <header class="header">Welcome to EasyMart</header>
+    <br />
+    <form>
+    <div  style="float: left; padding-left: 30px; padding-right: 30px; ">
+        <label for="items">Items: &emsp;</label>
+        <input type="text"  name="Items" placeholder="Enter item name" list="items_name" /> 
+
+            <datalist id="items_name">
+                <option value="Rice">Rice</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Pulse">Pulse</option>
+            </datalist>
+    </div>
+
+    <div style="float: right;  padding-right: 30px; ">
+        <label for="price">Price:</label>
+        <input type="text" name="price" placeholder="Enter price in Rupees"/> 
+    </div>
+     
+    <div  style="float: left; padding-left: 30px; padding-right: 30px; padding-top: 20px; ">
+        <label for="quantity">Quantity:</label>
+        <input type="text" name="Quantity" placeholder="Enter Quantity of Item" /> 
+    </div>
+
+    <div style="float: right;  padding-right: 30px; padding-top: 20px;">
+        <label for="Total_price">Total Price:</label>
+        <input type="text"  name="Total price" placeholder="Enter Total price of item"/> 
+    </div>
+    </div>
+    <br><br>
+   <div style="padding-left: 30px; padding-top: 30px; float: left;">
+     <button type="submit">Save & next</button>
+   </div>
+   <div style="padding-right: 30px; padding-top: 30px; float: right;">
+    <button type="reset">Delete Item</button>
+   </div>
+   </form>
+  
+  </body>
 </html>
