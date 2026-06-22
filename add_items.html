@@ -14,7 +14,7 @@
     <form>
     <div  style="float: left; padding-left: 30px; padding-right: 30px; ">
         <label for="items">Items: &emsp;</label>
-        <input type="text"  name="Items" placeholder="Enter item name" list="items_name" /> 
+        <input type="text" id="Items"  name="Items" placeholder="Enter item name" list="items_name" /> 
 
             <datalist id="items_name">
                 <option value="Rice">Rice</option>
@@ -25,27 +25,51 @@
 
     <div style="float: right;  padding-right: 30px; ">
         <label for="price">Price:</label>
-        <input type="text" name="price" placeholder="Enter price in Rupees"/> 
+        <input type="text"  id="price" name="price" placeholder="Enter price in Rupees"/> 
     </div>
      
     <div  style="float: left; padding-left: 30px; padding-right: 30px; padding-top: 20px; ">
         <label for="quantity">Quantity:</label>
-        <input type="text" name="Quantity" placeholder="Enter Quantity of Item" /> 
+        <input type="text" id="quantity" name="Quantity" placeholder="Enter Quantity of Item" /> 
     </div>
 
     <div style="float: right;  padding-right: 30px; padding-top: 20px;">
         <label for="Total_price">Total Price:</label>
-        <input type="text"  name="Total price" placeholder="Enter Total price of item"/> 
+        <input type="text" id="Total price" name="Total price" placeholder="Enter Total price of item"/> 
     </div>
     </div>
     <br><br>
    <div style="padding-left: 30px; padding-top: 30px; float: left;">
-     <button type="submit">Save & next</button>
+     <button type="submit" onclick="saveItem()">Save & next</button>
    </div>
    <div style="padding-right: 30px; padding-top: 30px; float: right;">
-    <button type="reset">Delete Item</button>
+    <button type="reset" onclick="resetItem()">Reset Item</button>
    </div>
    </form>
-  
+  <br><br><br>
+  <br>
+
+    <h2>
+      Items list
+    </h2>
+    <table>
+      <tr>
+        <th>Items</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>total price</th>
+      </tr>
+      <tbody id="list">
+
+      </tbody>
+    </table>
+   <script>
+    function resetItem(){
+      alert("reset item successfull.");
+    }
+    function saveItem(){
+      alert("Item saved successfull.")
+    }
+   </script>
   </body>
 </html>
